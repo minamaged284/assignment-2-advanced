@@ -2,78 +2,18 @@
 
 namespace assignment_2
 {
-
-    public class FixedSizeList<T>
-    {
-        public List<T> fixedSizeList = new List<T>();
-
-        public int Capacity { get; set; }
-        public FixedSizeList(int capacity)
-        {
-            if (capacity < 0 || capacity == null)
-            {
-                capacity = 0;
-            }
-
-            else
-            {
-                Capacity = capacity;
-            }
-        }
-
-        public void add(T item)
-        {
-            if (fixedSizeList.Count < Capacity)
-            {
-                fixedSizeList.Add(item);
-            }
-
-            else
-            {
-                throw new ArgumentException("the list is already full");
-            }
-
-        }
-
-        public T get(int index)
-        {
-            if (index >= 0 && index <= Capacity)
-            {
-                return fixedSizeList[index];
-            }
-            else { throw new ArgumentException("index is not valid"); }
-        }
-
-        public override string ToString()
-
-        {
-            string? content = "";
-
-            if (fixedSizeList != null)
-            {
-                foreach (T item in fixedSizeList)
-                {
-
-                    content += item.ToString()+"\n";
-            }
-            }
-            else { content = string.Empty; }
-
-            return content;
-        }
-    }
     internal class Program
     {
         #region part 2 
 
         #region question 1
 
-        
+
         static ArrayList reverseArrayList(ArrayList arrayList)
         {
-            ArrayList dummy = (ArrayList) arrayList.Clone();
+            ArrayList dummy = (ArrayList)arrayList.Clone();
 
-            for (int i = arrayList.Count-1; i >= 0; i--)
+            for (int i = arrayList.Count - 1; i >= 0; i--)
             {
                 arrayList.Add(arrayList[i]);
                 arrayList.RemoveAt(i);
@@ -89,17 +29,47 @@ namespace assignment_2
             List<int> evenNumbers = new List<int>();
             for (int i = 0; i < numbers.Count; i++)
             {
-              
 
-                    if (numbers[i] % 2 == 0)
-                    {
-                        evenNumbers.Add(numbers[i]);
-                    }
-                
+
+                if (numbers[i] % 2 == 0)
+                {
+                    evenNumbers.Add(numbers[i]);
+                }
+
 
             }
             return evenNumbers;
         }
+
+        #region question 4
+
+        static int getIndex(string input)
+        {
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (!dict.ContainsKey(input[i]))
+                {
+                    dict.Add(input[i], i);
+
+                }
+
+                else if (dict.ContainsKey(input[i]))
+                {
+                    dict.Remove(input[i]);
+                }
+            }
+            if (dict.Count == 0)
+            {
+                return -1;
+            }
+            else
+            return dict.FirstOrDefault().Value;
+        } 
+
+
+        #endregion
 
 
 
@@ -141,33 +111,33 @@ namespace assignment_2
 
             #region question 3
 
-            FixedSizeList<int> fixedSize = new FixedSizeList<int> (5);
+            //FixedSizeList<int> fixedSize = new FixedSizeList<int> (5);
 
-            fixedSize.add(1);
-            Console.WriteLine(fixedSize.ToString());
-            Console.WriteLine(fixedSize.ToString());
+            //fixedSize.add(1);
+            //Console.WriteLine(fixedSize.ToString());
+            //Console.WriteLine(fixedSize.ToString());
 
-            fixedSize.add(2);
-
-
-            Console.WriteLine(fixedSize.ToString());
+            //fixedSize.add(2);
 
 
-            fixedSize.add(3);
-            Console.WriteLine(fixedSize.ToString());
+            //Console.WriteLine(fixedSize.ToString());
 
 
-            fixedSize.add(4);
-            Console.WriteLine(fixedSize.ToString());
-
-            fixedSize.add(5);
-            Console.WriteLine(fixedSize.ToString());
-            Console.WriteLine(fixedSize.get(4));
-            Console.WriteLine(fixedSize.get(5));
+            //fixedSize.add(3);
+            //Console.WriteLine(fixedSize.ToString());
 
 
+            //fixedSize.add(4);
+            //Console.WriteLine(fixedSize.ToString());
 
-            fixedSize.add(6);
+            //fixedSize.add(5);
+            //Console.WriteLine(fixedSize.ToString());
+            //Console.WriteLine(fixedSize.get(4));
+            //Console.WriteLine(fixedSize.get(5));
+
+
+
+            //fixedSize.add(6);
 
 
 
@@ -176,6 +146,11 @@ namespace assignment_2
             #endregion
 
 
+
+            #region question 4
+            Console.WriteLine(getIndex(""));
+            
+            #endregion
             #endregion
 
 
