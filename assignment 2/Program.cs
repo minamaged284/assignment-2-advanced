@@ -65,8 +65,8 @@ namespace assignment_2
                 return -1;
             }
             else
-            return dict.FirstOrDefault().Value;
-        } 
+                return dict.FirstOrDefault().Value;
+        }
 
 
         #endregion
@@ -79,65 +79,65 @@ namespace assignment_2
         {
             #region part2
             #region question1
-            //ArrayList arrayList = new ArrayList()
-            //{
-            //    "mina", "maged", "atya","saeed", "saweres"
-            //};
+            ArrayList arrayList = new ArrayList()
+            {
+                "mina", "maged", "atya","saeed", "saweres"
+            };
 
-            //reverseArrayList(arrayList);
-            //foreach (var i in arrayList)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            reverseArrayList(arrayList);
+            foreach (var i in arrayList)
+            {
+                Console.WriteLine(i);
+            }
             #endregion
 
 
             #region question 2
 
-            //List<int> numbers = new List<int>() {
+            List<int> numbers = new List<int>() {
 
-            //    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
-            //};
+                1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+            };
 
 
 
-            //foreach (var number in even(numbers))
-            //{
-            //    Console.WriteLine(number);
-            //}
+            foreach (var number in even(numbers))
+            {
+                Console.WriteLine(number);
+            }
 
 
             #endregion
 
             #region question 3
 
-            //FixedSizeList<int> fixedSize = new FixedSizeList<int> (5);
+            FixedSizeList<int> fixedSize = new FixedSizeList<int>(5);
 
-            //fixedSize.add(1);
-            //Console.WriteLine(fixedSize.ToString());
-            //Console.WriteLine(fixedSize.ToString());
+            fixedSize.add(1);
+            Console.WriteLine(fixedSize.ToString());
+            Console.WriteLine(fixedSize.ToString());
 
-            //fixedSize.add(2);
-
-
-            //Console.WriteLine(fixedSize.ToString());
+            fixedSize.add(2);
 
 
-            //fixedSize.add(3);
-            //Console.WriteLine(fixedSize.ToString());
+            Console.WriteLine(fixedSize.ToString());
 
 
-            //fixedSize.add(4);
-            //Console.WriteLine(fixedSize.ToString());
-
-            //fixedSize.add(5);
-            //Console.WriteLine(fixedSize.ToString());
-            //Console.WriteLine(fixedSize.get(4));
-            //Console.WriteLine(fixedSize.get(5));
+            fixedSize.add(3);
+            Console.WriteLine(fixedSize.ToString());
 
 
+            fixedSize.add(4);
+            Console.WriteLine(fixedSize.ToString());
 
-            //fixedSize.add(6);
+            fixedSize.add(5);
+            Console.WriteLine(fixedSize.ToString());
+            Console.WriteLine(fixedSize.get(4));
+            Console.WriteLine(fixedSize.get(5));
+
+
+
+            fixedSize.add(6);
 
 
 
@@ -149,7 +149,7 @@ namespace assignment_2
 
             #region question 4
             Console.WriteLine(getIndex(""));
-            
+
             #endregion
             #endregion
 
